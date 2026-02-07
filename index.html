@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kafka Button</title>
+</head>
+<body>
+  <h1>Kafka Event Publisher</h1>
+  <button onclick="publish()">Click Me</button>
+
+  <script>
+    async function publish() {
+      await fetch("http://localhost:3000/publish", {
+        method: "POST",
+      });
+    }
+  </script>
+</body>
+</html>
